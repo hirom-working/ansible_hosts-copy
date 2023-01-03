@@ -1,0 +1,2 @@
+[worker]
+ansible-worker ansible_host=192.168.150.181

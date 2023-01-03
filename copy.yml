@@ -1,0 +1,17 @@
+---
+- hosts: all
+
+  vars:
+    ansible_user: hirom
+
+  tasks:
+    - name: copy hosts
+      become: yes
+      ansible.builtin.copy:
+        src: ./files/hosts
+        dest: /etc/hosts
+        owner: root
+        group: adm
+        mode: '0644'
+        backup: yes
+...
